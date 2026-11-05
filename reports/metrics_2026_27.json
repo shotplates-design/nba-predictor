@@ -1,0 +1,54 @@
+{
+  "generated_et": "2026-11-04 22:00:50 America/New_York",
+  "label": "2026-27_live_leak_free_logistic",
+  "leak_free": true,
+  "train_seasons": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "train_n": 3690,
+  "test_season": "2026-27",
+  "finished_metrics": {
+    "n": 119,
+    "accuracy": 0.6134453781512605,
+    "log_loss": 0.6542323706357904,
+    "brier": 0.23260297329436033,
+    "margin_mae": 11.778947574525107
+  },
+  "finished_n": 119,
+  "upcoming_n": 1092,
+  "upcoming_from": "2026-11-04",
+  "upcoming_to": "2027-04-11",
+  "feature_cols": [
+    "HOME_ELO",
+    "AWAY_ELO",
+    "ELO_DIFF",
+    "ELO_HOME_WIN_PROB",
+    "HOME_REST",
+    "AWAY_REST",
+    "REST_DIFF",
+    "HOME_PRIOR_PPG",
+    "AWAY_PRIOR_PPG",
+    "HOME_PRIOR_OPP_PPG",
+    "AWAY_PRIOR_OPP_PPG",
+    "HOME_PRIOR_NET",
+    "AWAY_PRIOR_NET",
+    "PPG_DIFF",
+    "NET_DIFF",
+    "IMPLIED_MARGIN"
+  ],
+  "holdout_reference_2025_26": {
+    "accuracy": 0.6846,
+    "log_loss": 0.6044,
+    "brier": 0.2082,
+    "n": 1230
+  },
+  "caveats": [
+    "Early-season sample is small; metrics are unstable.",
+    "Upcoming features use current Elo/form after last played game; rest walks the schedule without updating strength until tip.",
+    "No dressed-roster / injury-report features (skipped per request).",
+    "Analysis only \u2014 no betting picks, odds, or wager recommendations."
+  ],
+  "analysis_only_no_betting": true
+}
