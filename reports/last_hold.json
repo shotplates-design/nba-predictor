@@ -1,0 +1,54 @@
+{
+  "generated_et": "2026-11-05T03:22:46 UTC",
+  "label": "2026-27_live_leak_free_logistic",
+  "leak_free": true,
+  "train_seasons": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "train_n": 3813,
+  "test_season": "2026-27",
+  "finished_metrics": {
+    "n": 123,
+    "accuracy": 0.6016260162601627,
+    "log_loss": 0.6540409594469005,
+    "brier": 0.2325752250473452,
+    "margin_mae": 11.589478441517738
+  },
+  "finished_n": 123,
+  "upcoming_n": 1077,
+  "feature_cols": [
+    "HOME_ELO",
+    "AWAY_ELO",
+    "ELO_DIFF",
+    "ELO_HOME_WIN_PROB",
+    "HOME_REST",
+    "AWAY_REST",
+    "REST_DIFF",
+    "HOME_PRIOR_PPG",
+    "AWAY_PRIOR_PPG",
+    "HOME_PRIOR_OPP_PPG",
+    "AWAY_PRIOR_OPP_PPG",
+    "HOME_PRIOR_NET",
+    "AWAY_PRIOR_NET",
+    "PPG_DIFF",
+    "NET_DIFF",
+    "IMPLIED_MARGIN"
+  ],
+  "walk_forward_log_loss": 0.71803,
+  "log_loss": 0.6540409594469005,
+  "accuracy": 0.6016260162601627,
+  "brier": 0.2325752250473452,
+  "updated_at_utc": "2026-11-05T03:22:46Z",
+  "data_source": "espn+nba_api",
+  "analysis_only_no_betting": true,
+  "caveats": [
+    "Early-season sample is small; metrics are unstable.",
+    "Upcoming features use current Elo/form after last played game.",
+    "No dressed-roster / injury-report features.",
+    "Analysis only \u2014 no betting picks, odds, or wager recommendations."
+  ],
+  "shipped": false,
+  "gate_reason": "wf_ll 0.718030 worse than baseline 0.696066; keep prior"
+}

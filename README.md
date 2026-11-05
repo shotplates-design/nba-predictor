@@ -1,33 +1,28 @@
-# NBA Game Predictor (2026-27)
+# NBA Predictor (analysis only)
 
-Local / Streamlit Community Cloud app showing **leak-free logistic** home-win probabilities for the 2026-27 NBA season.
+Leak-free logistic model for 2026–27 NBA games. **Not betting advice.**
 
-## Analysis only
+## App
 
-This is research / analysis. **Not betting advice.** No odds. No bet buttons. No recommended wagers.
+Streamlit Community Cloud reads `app.py` plus parquet under `data/processed/`.
 
-On the 2025-26 holdout the same model scored ~68.5% accuracy / log loss 0.604 and **did not beat** closing no-vig market probabilities (market LL ~0.570).
+## Daily refresh (self-sufficient)
 
-## Run locally
+GitHub Actions workflow `.github/workflows/daily-refresh.yml` runs daily at **11:00 UTC** (and on `workflow_dispatch`):
+
+1. Ingest current-season games (`nba_api` when reachable; ESPN public site API fallback)
+2. Rebuild prior-only features (Elo / rest / rolling PPG)
+3. Retrain on 2023–24 … 2025–26 + finished 2026–27
+4. Walk-forward log-loss gate — ship predictions only if not worse than the current model
+5. Commit updated parquet + `reports/metrics_2026_27.json` + `reports/daily_history.json` to `main` (triggers Streamlit redeploy)
+
+No secrets required. Uses `GITHUB_TOKEN` with `contents: write`.
+
+## Local
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+python scripts/daily_refresh.py
 streamlit run app.py
 ```
-
-Main file: `app.py`  
-Data: `data/processed/*.parquet`, `reports/metrics_2026_27.json` (precomputed snapshot).
-
-## Streamlit Community Cloud
-
-1. Deploy from this repo.
-2. Main file path: `app.py`
-3. Python version: 3.11+ recommended.
-
-## Caveats
-
-- Early-season finished-game metrics use a small sample and are unstable.
-- Upcoming predictions freeze Elo/form after the last played game in the snapshot; only rest/schedule walk forward.
-- Snapshot is static until the repo data files are refreshed.

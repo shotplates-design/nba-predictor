@@ -1,0 +1,34 @@
+[
+  {
+    "ts_utc": "2026-11-05T03:20:44Z",
+    "source": "espn+nba_api",
+    "shipped": true,
+    "gate_reason": "no prior walk-forward baseline; ship (wf_ll=0.696066)",
+    "walk_forward_log_loss": 0.696066,
+    "metrics": {
+      "n_finished": 120,
+      "n_upcoming": 1080,
+      "n_train": 3810,
+      "accuracy": 0.6083333333333333,
+      "log_loss": 0.6519896071993089,
+      "brier": 0.23160485657987392,
+      "mae_margin": 11.841822776792002
+    }
+  },
+  {
+    "ts_utc": "2026-11-05T03:22:46Z",
+    "source": "espn+nba_api",
+    "shipped": false,
+    "gate_reason": "wf_ll 0.718030 worse than baseline 0.696066; keep prior",
+    "walk_forward_log_loss": 0.71803,
+    "metrics": {
+      "n_finished": 123,
+      "n_upcoming": 1077,
+      "n_train": 3813,
+      "accuracy": 0.6016260162601627,
+      "log_loss": 0.6540409594469005,
+      "brier": 0.2325752250473452,
+      "mae_margin": 11.589478441517738
+    }
+  }
+]
