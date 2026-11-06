@@ -1,5 +1,5 @@
 {
-  "generated_et": "2026-11-05T03:22:46 UTC",
+  "generated_et": "2026-11-06T17:50:51 UTC",
   "label": "2026-27_live_leak_free_logistic",
   "leak_free": true,
   "train_seasons": [
@@ -7,17 +7,17 @@
     "2024-25",
     "2025-26"
   ],
-  "train_n": 3813,
+  "train_n": 3829,
   "test_season": "2026-27",
   "finished_metrics": {
-    "n": 123,
-    "accuracy": 0.6016260162601627,
-    "log_loss": 0.6540409594469005,
-    "brier": 0.2325752250473452,
-    "margin_mae": 11.589478441517738
+    "n": 139,
+    "accuracy": 0.6258992805755396,
+    "log_loss": 0.6327698265697836,
+    "brier": 0.2230154775522654,
+    "margin_mae": 11.28462218624547
   },
-  "finished_n": 123,
-  "upcoming_n": 1077,
+  "finished_n": 139,
+  "upcoming_n": 1061,
   "feature_cols": [
     "HOME_ELO",
     "AWAY_ELO",
@@ -36,12 +36,12 @@
     "NET_DIFF",
     "IMPLIED_MARGIN"
   ],
-  "walk_forward_log_loss": 0.71803,
-  "log_loss": 0.6540409594469005,
-  "accuracy": 0.6016260162601627,
-  "brier": 0.2325752250473452,
-  "updated_at_utc": "2026-11-05T03:22:46Z",
-  "data_source": "espn+nba_api",
+  "walk_forward_log_loss": 0.643522,
+  "log_loss": 0.6327698265697836,
+  "accuracy": 0.6258992805755396,
+  "brier": 0.2230154775522654,
+  "updated_at_utc": "2026-11-06T17:50:51Z",
+  "data_source": "espn",
   "analysis_only_no_betting": true,
   "caveats": [
     "Early-season sample is small; metrics are unstable.",
@@ -50,5 +50,5 @@
     "Analysis only \u2014 no betting picks, odds, or wager recommendations."
   ],
   "shipped": false,
-  "gate_reason": "wf_ll 0.718030 worse than baseline 0.696066; keep prior"
+  "gate_reason": "wf_ll 0.643522 worse than baseline 0.605625; keep prior"
 }
