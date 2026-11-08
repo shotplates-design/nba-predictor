@@ -94,5 +94,21 @@
       "brier": 0.21996810162568123,
       "mae_margin": 11.339104181045464
     }
+  },
+  {
+    "ts_utc": "2026-11-08T16:56:30Z",
+    "source": "espn",
+    "shipped": false,
+    "gate_reason": "wf_ll 0.647354 worse than baseline 0.605625; keep prior",
+    "walk_forward_log_loss": 0.647354,
+    "metrics": {
+      "n_finished": 154,
+      "n_upcoming": 1046,
+      "n_train": 3844,
+      "accuracy": 0.6493506493506493,
+      "log_loss": 0.6272210707532189,
+      "brier": 0.21950213529851095,
+      "mae_margin": 11.264267302291303
+    }
   }
 ]
