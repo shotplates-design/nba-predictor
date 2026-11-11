@@ -1,5 +1,5 @@
 {
-  "generated_et": "2026-11-08T16:56:30 UTC",
+  "generated_et": "2026-11-11T18:24:34 UTC",
   "label": "2026-27_live_leak_free_logistic",
   "leak_free": true,
   "train_seasons": [
@@ -7,17 +7,17 @@
     "2024-25",
     "2025-26"
   ],
-  "train_n": 3844,
+  "train_n": 3864,
   "test_season": "2026-27",
   "finished_metrics": {
-    "n": 154,
-    "accuracy": 0.6493506493506493,
-    "log_loss": 0.6272210707532189,
-    "brier": 0.21950213529851095,
-    "margin_mae": 11.264267302291303
+    "n": 174,
+    "accuracy": 0.6781609195402298,
+    "log_loss": 0.588100104544722,
+    "brier": 0.20389029130834993,
+    "margin_mae": 11.486628265100789
   },
-  "finished_n": 154,
-  "upcoming_n": 1046,
+  "finished_n": 174,
+  "upcoming_n": 1026,
   "feature_cols": [
     "HOME_ELO",
     "AWAY_ELO",
@@ -36,11 +36,11 @@
     "NET_DIFF",
     "IMPLIED_MARGIN"
   ],
-  "walk_forward_log_loss": 0.647354,
-  "log_loss": 0.6272210707532189,
-  "accuracy": 0.6493506493506493,
-  "brier": 0.21950213529851095,
-  "updated_at_utc": "2026-11-08T16:56:30Z",
+  "walk_forward_log_loss": 0.576011,
+  "log_loss": 0.588100104544722,
+  "accuracy": 0.6781609195402298,
+  "brier": 0.20389029130834993,
+  "updated_at_utc": "2026-11-11T18:24:34Z",
   "data_source": "espn",
   "analysis_only_no_betting": true,
   "caveats": [
@@ -50,5 +50,5 @@
     "Analysis only \u2014 no betting picks, odds, or wager recommendations."
   ],
   "shipped": false,
-  "gate_reason": "wf_ll 0.647354 worse than baseline 0.605625; keep prior"
+  "gate_reason": "wf_ll 0.576011 worse than baseline 0.544924; keep prior"
 }
