@@ -1,5 +1,5 @@
 {
-  "generated_et": "2026-11-24T21:01:09 UTC",
+  "generated_et": "2026-11-25T20:24:03 UTC",
   "label": "2026-27_live_leak_free_logistic",
   "leak_free": true,
   "train_seasons": [
@@ -14,7 +14,7 @@
     "accuracy": 0.6518518518518519,
     "log_loss": 0.6157705975780453,
     "brier": 0.2146807562011864,
-    "margin_mae": 11.26071210853664
+    "margin_mae": 11.32196818900114
   },
   "finished_n": 270,
   "upcoming_n": 930,
@@ -40,7 +40,7 @@
   "log_loss": 0.6157705975780453,
   "accuracy": 0.6518518518518519,
   "brier": 0.2146807562011864,
-  "updated_at_utc": "2026-11-24T21:01:09Z",
+  "updated_at_utc": "2026-11-25T20:24:03Z",
   "data_source": "espn",
   "analysis_only_no_betting": true,
   "caveats": [
